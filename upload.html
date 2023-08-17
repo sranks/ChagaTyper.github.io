@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--helps scale the website for phones/tablets/etc.-->
     <title>Chagas Disease Dashboard</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <header>
@@ -12,7 +13,9 @@
             <a href="index.html">
                 <img class="bug" src="img/typan.png" alt="beetle icon">      
             </a>
-            <a href="index.html" class="link"><h1>ChagaTyper</h1></a>
+            <a href="index.html" class="link">
+            <h1>ChagaTyper</h1>
+            </a>
         </div>  
         <nav>
             <a href="about.html">About</a> |
@@ -22,18 +25,21 @@
             <!-- re style so they are bigger and same width as image in section-->
         </nav>
     </header>
-    <section class="container">
-        <!--front page image-->
-        <img class="chagas" src="img/chagas.jpeg" alt="chagas structure">
-        <div class="inside">
-            <p>
-                Welcome to the ChagaTyper: <br>
-                The Interactive Genotyping Visualisation <br> Tool for Chagas Disease
-            </p>
-        </div>
-    </section> 
+ <br><br>
     <section>
+        <h1>Upload Data</h1>
+            <br>
+                <!--Uploading AGD data to use in visualizations-->
+                <form action="your_upload_endpoint" method="post" enctype="multipart/form-data">
+                    <label for="data-file">Drop or Upload Data Here:</label>
+                    <br>
+                    <label class="custom-file-input" for="data-file">Browse Files</label>
+                    <input type="file" id="data-file" accept=".fastq, .qpcr">
+                    <br>
+                    <input type="submit" value="Upload" class="upload-btn">
+                </form>
 
+                
     <footer style="font-family:Georgia, serif; color: #000900; font-size:
     14px; font-style: italic;">
     <hr>
