@@ -1,24 +1,28 @@
 
 /* styling for the icon in header */
 .bug {
-  width: 80px;
+  width: 100px;
   float: left;
   margin: 10px;
 }
 
 body {
-background-color: #f6f6f2;
+background-color: #c2a68a;
 color: whitesmoke;
 font-size: 16px;
 }
 /* styling for the header and nav */
 
 header {
-background-color: #d96846;
+background-color: #c2a68a;
 padding: 10px;
 display: flex;
 align-items: center;
 justify-content: space-between;
+border-bottom: #d96846 solid 4px;
+height: 80px;
+position: relative;
+z-index: 9999;
 }
 
 .header-content{
@@ -104,6 +108,9 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+section {
+  text-align: center;
+}
 
 .survey {
   display: inline-block;
@@ -179,7 +186,7 @@ input[type="file"] {
 }
 
 .custom-file-input:active {
-  background-color: #d96846;
+  background-color: #596235;
 }
 
 .upload-btn {
@@ -231,9 +238,11 @@ width: 70%;
 border-collapse: collapse;
 margin-top: 20px;
 color: #080808;
+margin-left: auto;
+margin-right: auto;
 }
 thead th {
-background-color: #99c3ff;
+background-color: #d96846;
 color: #080808;
 padding: 10px;
 text-align: center;
@@ -243,14 +252,19 @@ padding: 8px;
 text-align: center;
 }
 tbody tr:nth-child(even) {
-background-color: #cde0ff;
+background-color: #ea9c84;
 }
 tbody tr:nth-child(odd) {
-  background-color: #deeafe;
+  background-color: #ecb8a9;
 }
 table, th, td {
 border: 1px solid #000;
 }
 tbody th {
 font-weight: bold;
+}
+
+footer {
+  text-align: left;
+  color: black;
 }
