@@ -1,6 +1,7 @@
+/*CSS FILE FOR ALL CHAGATYPER FILES*/
 
 /* styling for the icon in header */
-.bug {
+.trypan {
   width: 100px;
   float: left;
   margin: 10px;
@@ -11,8 +12,8 @@ background-color: #c2a68a;
 color: whitesmoke;
 font-size: 16px;
 }
-/* styling for the header and nav */
 
+/* styling for the header and nav */
 header {
 background-color: #c2a68a;
 padding: 10px;
@@ -33,13 +34,14 @@ align-items: center;
 .header-content h1{
   margin: 0;
   color: #41462a;
-  font-size: 35px;
+  font-size: 40px;
   float: inline-start;
   }
 
+/* web title link */
 .link {
-  text-decoration: none; /* Remove underlines from links */
-  color: inherit; /* Inherit the color from the parent */
+  text-decoration: none; /* Removes the underlines from links */
+  color: inherit; 
 }
 
 nav {
@@ -53,6 +55,23 @@ nav a {
   font-size: 22px;
   text-decoration: none;
 }
+
+/*styling for the language selector box */
+#language-selector {
+  padding: 8px;
+  font-size: 16px;
+  display: inline;
+  font-family: Georgia;
+  background-color: #d96846;
+  color: #41462a;
+}
+
+#language-selector a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
 
 /* styling for the chagas micorscopic image */
 .chagas {
@@ -112,6 +131,7 @@ section {
   text-align: center;
 }
 
+/*Styling for the survey box*/
 .survey {
   display: inline-block;
   padding: 10px 20px;
@@ -207,7 +227,7 @@ aside {
 margin-right: 1em;
 margin-bottom: 1em;
 padding: .5em;
-height: 200vh;
+height: 170vh;
 width: 25%;
 background-color: #d96846;
 color: #f8f8f8;
@@ -227,8 +247,8 @@ text-align: left;
 .map {
 max-width: 80%;
 height: auto;
-  margin-left: 20px;
-
+margin-left: 20px;
+padding-bottom: 56.25%; 
 }
 
 

@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8"> <!--default character settings-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--helps scale the website for phones/tablets/etc.-->
-    <title>Chagas Disease Dashboard</title>
+    <title>ChagaTyper</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body></body>
+<body>
     <header>
         <div class="header-content"> 
+            <!--image and title link to bring user back to home page-->
             <a href="index.html">
-                <img class="bug" src="img/typan.png" alt="beetle icon">      
+                <img class="trypan" src="img/typan.png" alt="Trypanosoma">      
             </a>
             <a href="index.html" class="link"><h1>ChagaTyper</h1></a>
         </div>  
         <nav>
+            <!--navigation links-->
             <a href="about.html">About</a> |
             <a href="upload.html">Upload Data</a> |
             <a href="visualise.html">Visualize</a> |
             <a href="clinical.html">Clinical Database</a> 
-            <!-- re style so they are bigger and same width as image in section-->
         </nav>
+        <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+            <option value="es">Español</option>
+        </select>
     </header>
     <section class="container">
         <!--front page image-->
@@ -31,9 +37,11 @@
                 The Interactive Genotyping Visualisation <br> Tool for Chagas Disease
             </p>
         </div>
+        
     </section> 
     <br>
     <section>
+        <!--link to survey-->
         <a href="https://forms.gle/Pi6WYAkDCpKABRUC7" target="_blank" class="survey">Feedback survey</a>
     </section>
     <br><br>
@@ -45,5 +53,23 @@
     Contact: 2707319r@student.gla.ac.uk
     </footer>
 
+    <!-- java script code for switching to different languages-->
+    <script>
+        document.getElementById('language-selector').addEventListener('change', function() {
+          var selectedLanguage = this.value;
+          var currentPath = window.location.pathname;
+          var newPath;
+      
+          if (selectedLanguage === 'en') {
+            newPath = currentPath.replace(/\/[^\/]*$/, '/index.html');
+          } else if (selectedLanguage === 'pt') {
+            newPath = currentPath.replace(/\/[^\/]*$/, '/pt/index-pt.html');
+          } else if (selectedLanguage === 'es') {
+            newPath = currentPath.replace(/\/[^\/]*$/, '/es/index-es.html');
+          }
+      
+          window.location.href = newPath;
+        });
+    </script>
 </body>
 </html>

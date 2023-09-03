@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--PORTUGUESE VERSION-->
+<html>
+<head>
+    <meta charset="UTF-8"> <!--default character settings-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--helps scale the website for phones/tablets/etc.-->
+    <title>Chagas Disease Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body></body>
+    <header>
+        <div class="header-content">
+            <!--image and title link to bring user back to home page--> 
+            <a href="index-pt.html">
+                <img class="trypan" src="../img/typan.png" alt="Trypanosoma">      
+            </a>
+            <a href="index-pt.html" class="link"><h1>ChagaTyper</h1></a>
+        </div>  
+        <nav>
+          <!--navigation links for portuguese website-->
+          <a href="about-pt.html">Sobre</a> |
+          <a href="upload-pt.html">Carregar dados</a> |
+          <a href="visualise-pt.html">Visualizar</a> |
+          <a href="clinical-pt.html">Banco de dados clínico</a> 
+        </nav>
+        <select id="language-selector">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+    </header>
+
+    <!-- Portuguese version of About section -->
+    <section>
+      <br><br>
+        <h1>Sobre</h1>
+            <div class="about">
+              <strong style="color: black;">Nossa plataforma foi projetada para permitir que você obtenha uma compreensão mais profunda da doença de Chagas e do <i>Trypanosoma Cruzi</i>.
+                <br> Queremos fornecer as ferramentas necessárias para entender melhor os padrões das doenças. Ao usar os dados genômicos coletados, podemos criar visualizações interativas.
+                <br> <br> Nossa missão é fornecer um centro abrangente e fácil de usar para rastrear e compreender a dinâmica das doenças.
+                <br> <br> Reserve algum tempo e explore nossa primeira maquete. Agradeceríamos muito se você pudesse nos fornecer seus comentários no link da pesquisa abaixo.
+                <br> Observe que, no momento, as visualizações não são interativas e são utilizadas como uma forma de ver como ficará o site quando estiver totalmente operacional.
+                <br><br>
+              </strong>   
+              </div>
+              <a href="https://forms.gle/Pi6WYAkDCpKABRUC7" target="_blank" class="survey">Feedback survey</a>
+              <br><br><br><br>
+              <h2> E quanto aos seus dados?</h2>
+              <br>
+              <img class="chagasflow" src="../img/chagasflow.png" alt="flow chart of data being uploaded">
+              <br><br>
+              <h2><i>Trypanosoma Cruzi</i></h2>
+              <p class="Tcruzi"> Informações gerais sobre <i>T. cruzi</i></p>
+      </section>
+      <br><br><br>
+
+    <footer>
+    <hr>
+    &copy; 2023 University of Glasgow<br>
+    Bioinformatics final Project <br>
+    ChagaTyper <br>
+    Contact: 2707319r@student.gla.ac.uk
+    </footer>
+
+    <!-- java script code for switching to different languages-->
+    <script>
+      document.getElementById('language-selector').addEventListener('change', function() {
+        var selectedLanguage = this.value;
+        var currentPath = window.location.pathname;
+        var newPath;
+    
+        switch (selectedLanguage) {
+          case 'en':
+            newPath = '../index.html';
+            break;
+          case 'pt':
+            newPath = '/pt/index-pt.html';
+            break;
+          case 'es':
+            newPath = '../es/index-es.html';
+            break;
+          default:
+            newPath = '../index.html';
+            break;
+        }
+    
+        window.location.href = newPath;
+      });
+    </script>
+</body>
+</html>

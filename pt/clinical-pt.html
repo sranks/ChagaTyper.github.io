@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--PORTUGUESE VERSION-->
+<html>
+<head>
+    <meta charset="UTF-8"> <!--default character settings-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--helps scale the website for phones/tablets/etc.-->
+    <title>Chagas Disease Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body></body>
+    <header>
+        <div class="header-content"> 
+            <!--image and title link to bring user back to home page-->
+            <a href="index-pt.html">
+                <img class="trypan" src="../img/typan.png" alt="Trypanosoma">      
+            </a>
+            <a href="index-pt.html" class="link"><h1>ChagaTyper</h1></a>
+        </div>  
+        <nav>
+          <!--navigation links for portuguese website-->
+          <a href="about-pt.html">Sobre</a> |
+          <a href="upload-pt.html">Carregar dados</a> |
+          <a href="visualise-pt.html">Visualizar</a> |
+          <a href="clinical-pt.html">Banco de dados clínico</a>
+        </nav>
+        <select id="language-selector">
+            <option value="pt">Português</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+        </select>
+    </header>
+    <br><br>
+    <section>
+        <h1>Banco de dados clínico</h1>
+        <!--sample table for where the clincal data could be seen-->
+        <table>
+        <thead>
+            <tr>
+                <th>Dados</th>
+                <th>Idade do paciente</th>
+                <th>Genótipo</th>
+                <th>Classificação dos sintomas</th>
+                </tr>
+            </thead> 
+            <tbody>
+                <tr>
+                    <th>Amostra 1</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Amostra 2</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Amostra 3</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Amostra 4</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody> 
+        </table>
+        <br><br>
+    </section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <footer>
+  <hr>
+  &copy; 2023 University of Glasgow<br>
+  Bioinformatics final Project <br>
+  ChagaTyper <br>
+  Contact: 2707319r@student.gla.ac.uk
+  </footer>
+
+  <!-- java script code for switching to different languages-->
+  <script>
+    document.getElementById('language-selector').addEventListener('change', function() {
+      var selectedLanguage = this.value;
+      var currentPath = window.location.pathname;
+      var newPath;
+  
+      switch (selectedLanguage) {
+        case 'en':
+          newPath = '../index.html';
+          break;
+        case 'pt':
+          newPath = '/pt/index-pt.html';
+          break;
+        case 'es':
+          newPath = '../es/index-es.html';
+          break;
+        default:
+          newPath = '../index.html';
+          break;
+      }
+  
+      window.location.href = newPath;
+    });
+  </script>
+</body>
+</html>
